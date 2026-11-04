@@ -1,5 +1,5 @@
-name: pocket_expenses
-description: A simple offline expense tracker built with Flutter.
+name: expense_tracker
+description: A clean, offline personal expense tracker built with Flutter.
 publish_to: 'none'
 version: 1.0.0+1
 

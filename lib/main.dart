@@ -8,7 +8,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (_) => ExpenseStore()..load(),
-      child: const PocketExpensesApp(),
+      child: const ExpenseTrackerApp(),
     ),
   );
 }
@@ -122,13 +122,13 @@ class ExpenseStore extends ChangeNotifier {
 // -----------------------------------------------------------------------------
 // MAIN APP & THEME (GP 7: Consistent Material 3 Theme)
 // -----------------------------------------------------------------------------
-class PocketExpensesApp extends StatelessWidget {
-  const PocketExpensesApp({super.key});
+class ExpenseTrackerApp extends StatelessWidget {
+  const ExpenseTrackerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pocket Expenses',
+      title: 'Expense Tracker',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -172,7 +172,7 @@ class _ExpenseHomeScreenState extends State<ExpenseHomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          _currentTab == 0 ? 'Pocket Expenses' : 'Expense Summary',
+          _currentTab == 0 ? 'Expense Tracker' : 'Expense Summary',
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [

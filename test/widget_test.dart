@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pocket_expenses/main.dart';
+import 'package:expense_tracker/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -9,13 +9,13 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
 
-  testWidgets('App renders Pocket Expenses title', (WidgetTester tester) async {
+  testWidgets('App renders Expense Tracker title', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const PocketExpensesApp());
+    await tester.pumpWidget(const ExpenseTrackerApp());
     await tester.pumpAndSettle();
 
     // Verify that the title text is rendered.
-    expect(find.text('Pocket Expenses'), findsWidgets);
+    expect(find.text('Expense Tracker'), findsWidgets);
   });
 
   test('Expense model serialization test', () {
